@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div.director {
+    text-align: center;
+    padding: 1em;
+    background-color: red;
+    font-size: 150%;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div.principal{
+    display: flex;
+    justify-content: center;
+}
+
+div.peliculas{
+    display: flex;
+    flex-basis: 80%;
+    flex-wrap: wrap;
+}
+
+div.pelicula {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-direction: column;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    margin: 5px;
+    background-color:#007EA7 ;
+}
+
+div.peliculas div.pelicula:nth-of-type(3n+1) {
+    flex-basis: 25%;
+    
+}
+div.peliculas div.pelicula:nth-of-type(3n+2) {
+    flex-basis: 25%;
+    
+}
+div.peliculas div.pelicula:nth-of-type(3n) {
+    flex-basis: 25%;
+    
+}
+
+.titulo{
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: center;
+    text-align: center;
+    background-color: #80CED7
+}
+
+img {
+    height: 300px;
+}
+
+div.pelicula:hover {
+    box-shadow: 2px 5px 4px 5px #000000;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registrousuario</title>
+    <link rel="stylesheet" href="registro.css">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+</head>
+<body>
+    <div class="registro">
+    <h1>Registrate</h1>
+    <table>
+        <tr>
+            <td>Usuario</td>
+            <td><input class="introducir" type="text" id="usuario"></td>
+        </tr>
+        <tr>
+            <td>Clave</td>
+            <td><input class="introducir" type="text" id="clave"></td>
+        </tr>
+        <tr>
+            <td>Tipo</td>
+            <td><input class="introducir" type="text" id="tipo"></td>
+        </tr>
+    </table>
+    <button class="boton" onclick="insertarUsuario();alerta()">Registrame</button>
+    <input class="boton" type="button" onclick="location.href='login.html';" value="Volver" />
+         <div class="ayuda">
+        <p class="ayuda">
+            <ul>
+                <li>Introudcir tu nombre en usuario</li>
+                <li>Hay dos tipos:
+                    <li>Si eres admin en tipo debes introducir: admin</li>
+                    <li>Si eres usuario en tipo debes introducir: usuario</li>
+                </li>
+            </ul>
+        </p>
+        </div>
+    </div>
+    <script src="insertarUsuario.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+</head>
+
+<body>
+    <div id="login" class="login">
+        <h1 class="inicio">Login</h1><br><br>
+        <h1 class="TituloLogin">Peliculas Carmona</h1><br><br> Usuario <br><br>
+        <Input type="text" id="usuario"></Input><br><br> Contraseña <br> <br>
+        <Input type="text" id="clave"></Input><br><br>
+        <Button onclick="ComprobarUsuario()" class="BotonEntrar">Entrar</Button><br><br>
+        <input class="BotonEntrar" type="button" onclick="location.href='registrousuario.html';" value="Registrarse" />
+
+    </div>
+    <script>
+        function ComprobarUsuario() {
+            const dataForSelect = {
+                operation: "select",
+                table: "login"
+            };
+
+            const idImplementacion = "AKfycbx44iRHZEqsnlhoic9IaiAMUqK7pQ7mS_iWxgYsl4wD87XySw3-fnHLNvWGFxqUnzhvbw";
+
+            GoogleSheetDataBaseOperation(
+                idImplementacion,
+                dataForSelect,
+                ConsultarUsuarioTerminado);
+        }
+
+        function ConsultarUsuarioTerminado(response) {
+            let VerificarUsuario = false;
+            for (let i = 0; i < response.values.length; i++) {
+                let clave = document.getElementById("clave").value;
+                let usuario = document.getElementById("usuario").value;
+
+                if (response.values[i].usuario == usuario && response.values[i].contrasena == clave && response.values[i].tipo == "admin") {
+                    console.log("Clave y Usuario correcto, Bienvenido a nuestra web");
+                    VerificarUsuario = true;
+                    window.location = "prioridad.html";
+                } else if (response.values[i].usuario == usuario && response.values[i].contrasena == clave && response.values[i].tipo == "usuario") {
+                    console.log("Clave y Usuario correcto, Bienvenido a nuestra web");
+                    VerificarUsuario = true;
+                    window.location = "sinprioridad.html";
+                }
+            }
+            if (VerificarUsuario == false) {
+                console.log("No es el usuario")
+                alert("Clave y Usuario INCORRECTO");
+            }
+        }
+    </script>
+</body>
+
+</html>

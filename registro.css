@@ -1,0 +1,26 @@
+*{
+    background-color: #20a6d8;
+}
+h1{
+    margin-left: 100px ;
+    background-color: blanchedalmond;
+    width: 150px;
+}
+div.registro{
+    margin: auto;
+    width: 450px;
+}
+
+.introducir{
+    background-color: white;
+}
+
+div.ayuda{
+    border: 5px solid red;
+    width: 350px;
+}
+
+.boton{
+    background-color: white;
+    margin: auto;
+}

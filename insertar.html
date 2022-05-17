@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar Pelicula</title>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <link rel="stylesheet" href="insertarPelicula.css">
+</head>
+<body>
+    <div class="principal">
+        <div class="titulo">
+        <h1>Insertar Pelicula</h1>
+        </div>
+        <div class="info">
+        <p>ID: <input type="text" id="IdSeleccionado"></p>
+        <p>Titulo:  <input type="text" id="TituloSeleccionado"></p>
+        <p>ID Genero: <input type="text" id="GeneroSeleccionado"></p>
+        <p>ID Director: <input type="text" id="DirectorSeleccionado"></p>
+        <p>Sinopsis: <input type="text" id="SinopsisSeleccionado"></p>
+        <p>Imagen: <input type="text" id="ImagenSeleccionado"></p>
+        <p>Año: <input type="text" id="AnoSeleccionado"></p>
+        <p>Duraccion: <input type="text" id="DuraccionSeleccionado"></p>
+        </div>
+        <button onclick="insertarPelicula()">Insertar Pelicula</button>
+    </div>
+    <script src="insertarPelicula.js"></script>
+</body>
+</html>
