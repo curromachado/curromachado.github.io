@@ -21,8 +21,7 @@ function insertarGenero() {
         insertarGeneroTerminado);
 }
 
-function insertarGeneroTerminado(response) {
-    window.alert("Insertado con exito");
+function insertarGeneroTerminado() {
+    window.alert("Insertado con exito")
+    window.location.replace("prioridad.html")
 }
-
-

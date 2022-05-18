@@ -18,7 +18,7 @@ function BorrarPelicula() {
         BorrarPeliculaTerminado);
 }
 
-function BorrarPeliculaTerminado(response) {
+function BorrarPeliculaTerminado() {
     window.alert("Se ha borrado "+key);
-    
+    window.location.replace("principal-prioridad.html")
 }

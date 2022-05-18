@@ -25,8 +25,9 @@ function insertarPelicula() {
         insertarPeliculaTerminado);
 }
 
-function insertarPeliculaTerminado(response) {
+function insertarPeliculaTerminado() {
     window.alert("Insertada con exito");
+    window.location.replace("prioridad.html");
 }
 
 

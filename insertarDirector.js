@@ -22,8 +22,9 @@ function insertarDirector() {
         insertarDirectorTerminado);
 }
 
-function insertarDirectorTerminado(response) {
+function insertarDirectorTerminado() {
     window.alert("Insertado con exito");
+    window.location.replace("prioridad.html");
 }
 
 

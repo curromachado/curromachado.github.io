@@ -66,8 +66,9 @@ function modificarPelicula() {
         updatePeliculaTerminado);
 
 }
-function updatePeliculaTerminado(response) {
+function updatePeliculaTerminado() {
     window.alert("Fila Actualizada");
+    window.location.replace("principal-prioridad.html")
 }
 
 
